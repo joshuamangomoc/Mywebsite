@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        /* Reset some default browser styles */
+        body, h1, h2, p, ul {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif; /* Updated font family */
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #6A0DAD; /* Matte purple background */
+            color: #fff; /* White text color for contrast */
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
+        }
+
+        .container {
+            background: #4B0082; /* Slightly darker shade of purple */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+            transition: background-color 0.3s; /* Smooth transition for theme change */
+        }
+
+        h1, h2 {
+            color: #FFD700; /* Gold color for headings */
+            margin-bottom: 10px;
+            font-weight: 700; /* Bold headings */
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .likes ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        /* Tab Styles */
+        .tab {
+            overflow: hidden;
+            background-color: #333;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            transition: 0.3s;
+            color: white;
+            font-size: 17px;
+            font-weight: bold; /* Make font bold */
+        }
+
+        .tab button:hover {
+            background-color: #555;
+        }
+
+        .tab button.active {
+            background-color: #6A0DAD;
+        }
+
+        /* Tab Content */
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            background-color: #4B0082;
+            border-radius: 0 0 8px 8px;
+            transition: background-color 0.3s; /* Smooth transition for theme change */
+        }
+
+        /* Buttons in Design Tab */
+        .tabcontent button {
+            background-color: #6A0DAD;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+        }
+
+        .tabcontent button:hover {
+            background-color: #5a0d8a; /* Slightly darker purple for hover effect */
+            transform: scale(1.05); /* Slightly enlarge button on hover */
+        }
+
+        .tabcontent button:active {
+            background-color: #4b0082; /* Even darker purple for active state */
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            body {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            h1, h2 {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1, h2 {
+                font-size: 1.2em;
+            }
+
+            body, .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to My Website</h1>
+        <p>Hello! My name is <strong>𝓙𝓸𝓼𝓱𝓾𝓪 𝕸𝖆𝖓𝖌𝖔𝖒𝖔𝖈</strong>. This website is a little corner of the internet where I share a bit about myself and what I enjoy.</p>
+        
+        <!-- Tabs -->
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Home')" id="defaultOpen">Home</button>
+            <button class="tablinks" onclick="openTab(event, 'Gamer')">Gamer</button>
+            <button class="tablinks" onclick="openTab(event, 'Program')">Program/Language</button>
+            <button class="tablinks" onclick="openTab(event, 'About')">About</button>
+            <button class="tablinks" onclick="openTab(event, 'Design')">Design</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div id="Home" class="tabcontent">
+            <h2>Welcome</h2>
+            <p>Hello! This is the home page of my personal website.</p>
+        </div>
+
+        <div id="Gamer" class="tabcontent">
+            <h2>Games I Play</h2>
+            <ul>
+                <li>Minecraft</li>
+                <li>Terraria</li>
+                <li>Stardew Valley</li>
+                <li>Fields of Mistria</li>
+                <li>Mobile Legends</li>
+            </ul>
+        </div>
+
+        <div id="Program" class="tabcontent">
+            <h2>Programming Languages</h2>
+            <ul>
+                <li>Basics of Java</li>
+                <li>Visual Basic Studio (VBS) Language</li>
+                <li>HTML and CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+
+        <div id="About" class="tabcontent">
+            <h2>About This Website</h2>
+            <p>The purpose of this website is solely for educational purposes. It serves as a platform for me to practice web development and share my journey in learning new skills. All content provided here is for informational purposes only.</p>
+            
+            <h2>Contacts</h2>
+            <p>You can contact me on these platforms:</p>
+            
+            <ul>
+                <li><strong>YouTube:</strong> <a href="https://www.youtube.com/@parcell017" target="_blank" style="color: #FFD700;">Parcell017</a></li>
+                <li><strong>Email: </strong><a href="mailto:joshuaisfound@gmail.com" style="color: #FFD700;">joshuaisfound@gmail.com</a></li>
+                <li><strong>You can also find me on Facebook.</strong></li>
+            </ul>
+        </div>
+
+        <div id="Design" class="tabcontent">
+            <h2>Change Website Theme</h2>
+            <p>Select a theme to change the look of this website:</p>
+            <button onclick="setTheme('light')">Light</button>
+            <button onclick="setTheme('dark')">Dark</button>
+            <button onclick="setTheme('default')">Purple</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to switch tabs
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Default tab open
+        document.getElementById("defaultOpen").click();
+
+        // Function to change theme
+        function setTheme(theme) {
+            var body = document.body;
+            var container = document.querySelector('.container');
+            var tabcontent = document.querySelectorAll('.tabcontent');
+
+            if (theme === 'light') {
+                body.style.backgroundColor = '#f4f4f4';
+                body.style.color = '#333';
+                container.style.backgroundColor = '#fff';
+                tabcontent.forEach(function(content) {
+                    content.style.backgroundColor = '#fff';
+                });
+            } else if (theme === 'dark') {
+                body.style.backgroundColor = '#333';
+                body.style.color = '#f4f4f4';
+                container.style.backgroundColor = '#555';
+                tabcontent.forEach(function(content) {
+                    content.style.backgroundColor = '#555';
+                });
+            } else {
+                // Default purple theme
+                body.style.backgroundColor = '#6A0DAD';
+                body.style.color = '#fff';
+                container.style.backgroundColor = '#4B0082';
+                tabcontent.forEach(function(content) {
+                    content.style.backgroundColor = '#4B0082';
+                });
+            }
+        }
+    </script>
+</body>
+</html>
