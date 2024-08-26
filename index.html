@@ -10,16 +10,18 @@
         body, h1, h2, p, ul {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
         
         body {
-            font-family: 'Roboto', sans-serif; /* Updated font family */
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
-            margin: 20px;
             background-color: #6A0DAD; /* Matte purple background */
             color: #fff; /* White text color for contrast */
             padding: 20px;
-            transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
+            transition: background-color 0.3s, color 0.3s;
+            max-width: 100%;
+            overflow-x: hidden;
         }
 
         .container {
@@ -29,20 +31,22 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             max-width: 800px;
             margin: auto;
-            transition: background-color 0.3s; /* Smooth transition for theme change */
+            transition: background-color 0.3s;
         }
 
         h1, h2 {
             color: #FFD700; /* Gold color for headings */
             margin-bottom: 10px;
-            font-weight: 700; /* Bold headings */
+            font-weight: 700;
+            font-size: 1.8em;
         }
 
         p {
             margin-bottom: 20px;
+            font-size: 1.1em;
         }
 
-        .likes ul {
+        ul {
             list-style-type: square;
             padding-left: 20px;
         }
@@ -53,19 +57,21 @@
             background-color: #333;
             margin-top: 20px;
             border-radius: 8px;
+            display: flex;
+            flex-wrap: wrap;
         }
 
         .tab button {
             background-color: inherit;
-            float: left;
+            flex: 1;
             border: none;
             outline: none;
             cursor: pointer;
             padding: 10px 20px;
             transition: 0.3s;
             color: white;
-            font-size: 17px;
-            font-weight: bold; /* Make font bold */
+            font-size: 1em;
+            font-weight: bold;
         }
 
         .tab button:hover {
@@ -82,7 +88,7 @@
             padding: 20px;
             background-color: #4B0082;
             border-radius: 0 0 8px 8px;
-            transition: background-color 0.3s; /* Smooth transition for theme change */
+            transition: background-color 0.3s;
         }
 
         /* Buttons in Design Tab */
@@ -97,23 +103,26 @@
             font-size: 16px;
             margin: 5px;
             cursor: pointer;
-            border-radius: 5px; /* Rounded corners */
-            transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
         }
 
         .tabcontent button:hover {
-            background-color: #5a0d8a; /* Slightly darker purple for hover effect */
-            transform: scale(1.05); /* Slightly enlarge button on hover */
+            background-color: #5a0d8a;
+            transform: scale(1.05);
         }
 
         .tabcontent button:active {
-            background-color: #4b0082; /* Even darker purple for active state */
+            background-color: #4b0082;
         }
 
         /* Responsive design */
         @media (max-width: 768px) {
+            h1, h2 {
+                font-size: 1.5em;
+            }
+
             body {
-                margin: 10px;
                 padding: 10px;
             }
 
@@ -121,18 +130,32 @@
                 padding: 15px;
             }
 
-            h1, h2 {
-                font-size: 1.5em;
+            .tab button {
+                font-size: 0.9em;
             }
         }
 
         @media (max-width: 480px) {
             h1, h2 {
-                font-size: 1.2em;
+                font-size: 1.3em;
             }
 
-            body, .container {
+            body {
                 padding: 10px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .tab button {
+                padding: 10px;
+                font-size: 0.8em;
+            }
+
+            .tabcontent button {
+                padding: 8px 15px;
+                font-size: 14px;
             }
         }
     </style>
@@ -140,7 +163,7 @@
 <body>
     <div class="container">
         <h1>Welcome to My Website</h1>
-        <p>Hello! My name is <strong>𝓙𝓸𝓼𝓱𝓾𝓪 𝕸𝖆𝖓𝖌𝖔𝖒𝖔𝖈</strong>. This website is a little corner of the internet where I share a bit about myself and what I enjoy.</p>
+        <p>Hello! My name is Joshua Mangomoc. This website is a little corner of the internet where I share a bit about myself and what I enjoy.</p>
         
         <!-- Tabs -->
         <div class="tab">
